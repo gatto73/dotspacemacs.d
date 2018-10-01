@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# name: Nuovo Ticket
+# key: new_tk
+# contributor: lorenzo
+# --
+== Descrizione problema
+
+$0
+
+
+{{{
+#!html
+<h2 style="color: blue">
+Problema lato ${1:$$
+(yas-choose-value '("MACCHINA HX" "MACCHINA XQ" "NServer"))}
+</h2>
+}}}
+
+
+== Passi per riprodurre il problema
+
+
+== Versioni sw utilizzate per le prove
+* NServer: ${2:18.25.0.17-CONC - 28 Mag}
+* Macchina: ${3:$$
+(yas-choose-value '("GK616CTE"
+"GL616DCTE"))} ${4:4.15.1.0} - ${5:R58013}
+
+
+== Configurazione Nautilus utilizzata per le prove
+* Configurazione ${6:$$
+(yas-choose-value '("Gestione Concatenati Estesa"
+"Telemaco"
+"Trever"))}

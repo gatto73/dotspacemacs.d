@@ -1,0 +1,30 @@
+# wdired
+wdired-change-to-wdired-mode is an interactive autoloaded compiled Lisp function
+in ‘wdired.el’.
+
+(wdired-change-to-wdired-mode)
+
+Put a Dired buffer in Writable Dired (WDired) mode.
+
+In WDired mode, you can edit the names of the files in the
+buffer, the target of the links, and the permission bits of the
+files.  After typing C-c C-c, Emacs modifies the files and
+directories to reflect your edits.
+
+See ‘wdired-mode’.
+
+
+** pytest.el
+ 
+#+BEGIN_SRC emacs-lisp :tangle yes
+  ;; Fix problem of original pytest-find-test-runner-in-dir-named that does non
+  ;; work on Windows
+  (defun pytest-find-test-runner-in-dir-named (dn runner)
+    (let ((fn (expand-file-name runner dn)))
+      (cond ((file-regular-p fn) fn)
+            ((equal dn "/") nil)
+            ((string-match "\\`[:alpha:]:/\\'" dn) nil)
+            (t (pytest-find-test-runner-in-dir-named
+                (file-name-directory (directory-file-name dn))
+                runner)))))
+#+END_SRC

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Attach file eventi
+# key: file_eventi
+# contributor: lorenzo
+# --
+
+Per il file eventi cliccare [attachment:${1:eventi}.txt qui].
+
+$0

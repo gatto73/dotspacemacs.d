@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: Problema Lato HX/XQ/NServer
+# key: prob_lato
+# contributor: lorenzo
+# --
+
+{{{
+#!html
+<h2 style="color: blue">
+Problema lato ${1:$$
+(yas-choose-value '("MACCHINA HX" "MACCHINA XQ" "Nserver"))}
+</h2>
+}}}
+
+$0

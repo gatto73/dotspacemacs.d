@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Attenzione
+# key: attn
+# contributor: lorenzo
+# --
+
+{{{
+#!div class="important" 
+
+**ATTENZIONE**: ${1:testo}
+}}}
+$0

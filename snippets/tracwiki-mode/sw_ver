@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# key: sw_ver
+# name: Sw Version
+# contributor: lorenzo
+# --
+== Versioni sw utilizzate per ${1:$$
+(yas-choose-value '("le prove" "i test"))}
+* NServer: ${2:18.25.0.24-CONC - 17 Jul 2018}
+* Macchina: ${3:$$
+(yas-choose-value '("GK616CTE 4.16.0.0 - r59302"
+                    "GL616DCTE 9.0 - 9.10.68"))}
+
+$0

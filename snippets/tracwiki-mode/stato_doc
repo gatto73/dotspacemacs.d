@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: Stato Documento
+# key: stato_doc
+# contributor: lorenzo
+# --
+
+{{{#!box ${1:$$(yas-choose-value '("ok" "nok"))} 
+
+== Stato documento: ${2:$$
+(yas-choose-value '("COMPLETO" "INCOMPLETO" "BOZZA"))} ==
+
+$3
+
+}}}
+
+$0

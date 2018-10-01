@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Indice Wiki
+# key: toc
+# contributor: lorenzo
+# --
+[[PageOutline(2-5, Indice, floated)]]
+
+$0

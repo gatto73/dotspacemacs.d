@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: Validato con Versioni SW
+# key: validazione_doc
+# contributor: lorenzo
+# --
+
+{{{#!box info
+
+== Documentazione validata con queste impostazioni: ==
+
+=== Versioni sw: ===
+
+* NServer: ${1:18.25.0.25-CONC - 19 Jul}
+* Macchina: ${2:$$
+(yas-choose-value '("GK616CTE 4.15.2.0 - r58334"
+"GL616DCTE 9.0 - 9.10.60"))}
+
+=== Configurazione Nautilus: ===
+
+* Configurazione ${3:$$
+(yas-choose-value '("Gestione Concatenati Estesa"
+"Telemaco"
+"Trever"))}
+
+=== Data validazione ===
+
+* $4
+
+}}}
+
+$0

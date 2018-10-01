@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Ticket Query per pagine wiki
+# key: tk_query
+# contributor: lorenzo
+# --
+
+== Ticket collegati ==
+
+[[TicketQuery(keywords=~${1:keyword},order=id,desc=1,format=table,col=|summary|cmoponent|status|owner|reporter)]]
+
+$0

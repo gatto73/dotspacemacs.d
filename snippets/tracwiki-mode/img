@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Image
+# key: img
+# contributor: lorenzo
+# --
+[[Image(${1:img1}.JPG, ${2:$$
+(yas-choose-value '("300px" "400px" "700px"))})]]
+$0

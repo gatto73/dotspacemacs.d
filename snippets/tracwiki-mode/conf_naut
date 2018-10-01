@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: Configurazione Nautilus utilizzata
+# key: conf_nautilus
+# contributor: lorenzo
+# --
+
+== Configurazione Nautilus utilizzata per ${1:$$
+(yas-choose-value '("le prove" "i test"))}
+* Configurazione ${2:$$
+(yas-choose-value '("Gestione Concatenati Estesa"
+                    "Telemaco"
+                    "Trever"))}
+
+$0
+

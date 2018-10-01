@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: Test OK
+# key: test_ok
+# contributor: lorenzo
+# --
+
+{{{
+#!html
+<h2 style="color: green">
+Esito test: FUNZIONAMENTO CORRETTO
+</h2>
+}}}
+
+$0

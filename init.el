@@ -55,12 +55,8 @@ This function should only modify configuration layer settings."
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t
-<<<<<<< HEAD
-            c-c++-enable-clang-format-on-save t)
-     cmake
-=======
             c-c++-enable-clang-format-on-save nil)
->>>>>>> d78a3dc25963b2bd45df529e7c3801722a413e3d
+     cmake
      (spell-checking :variables
                      spell-checking-enable-by-default nil
                      enable-flyspell-auto-completion nil

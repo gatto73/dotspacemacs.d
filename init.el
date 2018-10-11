@@ -42,6 +42,7 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      ;; git
      ;; version-control
+     ;; semantic
      syntax-checking
      org
      helm
@@ -73,7 +74,6 @@ This function should only modify configuration layer settings."
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
      gtags
-     semantic
      vimscript
      ;; private layers
      trac
@@ -89,7 +89,8 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(atomic-chrome
-                                      flycheck-popup-tip)
+                                      flycheck-popup-tip
+                                      sphinx-doc)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()

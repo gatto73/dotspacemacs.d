@@ -94,6 +94,16 @@
                (spacemacs/toggle-fill-column-indicator-on)
                (spacemacs/toggle-auto-fill-mode-on))))
 
+;; configure sphinx-doc
+(use-package sphinx-doc
+  :defer t
+  :commands sphinx-doc
+  :init
+  (progn
+    (add-hook 'python-mode-hook 'sphinx-doc-mode)
+    (spacemacs/set-leader-keys-for-major-mode 'python-mode
+      "i" 'sphinx-doc)))
+
 ;; c++-mode configuration
 (with-eval-after-load 'cc-mode
   (add-hook 'c++-mode-hook

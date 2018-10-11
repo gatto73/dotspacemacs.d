@@ -198,12 +198,18 @@
 ;;; Additional packages configuration
 
 ;; Atomic Chrome configuration
-(require 'atomic-chrome)
-(atomic-chrome-start-server)
-(setq atomic-chrome-buffer-open-style 'full)
-(setq atomic-chrome-default-major-mode 'text-mode)
-(setq atomic-chrome-url-major-mode-alist '(("notebook" . python-mode)
-                                           ("Trac" . tracwiki-mode)))
+(use-package atomic-chrome
+  :defer t
+  :init
+  (progn
+    (atomic-chrome-start-server)
+    (add-hook 'atomic-chrome-edit-done-hook
+              '(lambda ()
+                 (spacemacs/copy-whole-buffer-to-clipboard)))
+    (setq atomic-chrome-buffer-open-style 'full)
+    (setq atomic-chrome-default-major-mode 'text-mode)
+    (setq atomic-chrome-url-major-mode-alist '(("notebook" . python-mode)
+                                               ("Trac" . tracwiki-mode)))))
 
 ;; flycheck-popup-tip configuration
 (require 'flycheck-popup-tip)

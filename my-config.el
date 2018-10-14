@@ -129,7 +129,8 @@
   (add-hook 'emacs-lisp-mode-hook
             '(lambda ()
                (spacemacs/toggle-fill-column-indicator-on)
-               (spacemacs/toggle-auto-fill-mode-on))))
+               (spacemacs/toggle-auto-fill-mode-on)
+               (setq semantic-mode nil))))
 
 
 

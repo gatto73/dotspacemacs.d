@@ -33,7 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   `(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -69,16 +69,19 @@ This function should only modify configuration layer settings."
      (python :variables
              python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
-     racket
      scheme
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
      gtags
      vimscript
+     semantic
      ;; private layers
+     ;; my-cscope
      trac
      robotframework
-     ;; my-cscope
+     ;; layers to install only if OS is Linux
+     ;; ,(when (eq system-type 'gnu/linux)
+     ;;    'semantic)
      )
 
    ;; List of additional packages that will be installed without being

@@ -485,6 +485,7 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq custom-file (concat dotspacemacs-directory "emacs-custom.el"))
   (load custom-file)
+  (setq-default git-enable-magit-svn-plugin t)
   )
 
 (defun dotspacemacs/user-load ()

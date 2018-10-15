@@ -143,8 +143,7 @@
   (add-hook 'emacs-lisp-mode-hook
             '(lambda ()
                (spacemacs/toggle-fill-column-indicator-on)
-               (spacemacs/toggle-auto-fill-mode-on)
-               (setq semantic-mode nil))))
+               (spacemacs/toggle-auto-fill-mode-on))))
 
 ;; hunspell configuration
 (with-eval-after-load "ispell"

@@ -42,7 +42,6 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      ;; git
      ;; version-control
-     ;; semantic
      syntax-checking
      org
      helm
@@ -80,8 +79,8 @@ This function should only modify configuration layer settings."
      trac
      robotframework
      ;; layers to install only if OS is Linux
-     ;; ,(when (eq system-type 'gnu/linux)
-     ;;    'semantic)
+     ,(when (eq system-type 'gnu/linux)
+        'semantic)
      )
 
    ;; List of additional packages that will be installed without being

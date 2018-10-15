@@ -1,4 +1,6 @@
+;; =============================================================================
 ;; System specific configurations
+;; =============================================================================
 
 (let (my-magit-repository-dir)
   (setq my-magit-repository-dir '(("~/workspace/SVN_git/" . 1)
@@ -24,9 +26,6 @@
                  "ZBook-andreoletti")
     (setq my/GTD-directory nil)
     (setq magit-repository-directories my-magit-repository-dir)))
-
-;; General configuration
-(setq-default tab-width 4)
 
 ;; Set "PATH" and "exec-path" for Windows to use msys64
 (when (eq system-type 'windows-nt)
@@ -64,6 +63,21 @@
 ;;          (getenv "PATH")))
 ;; 
 ;; (setq exec-path (append '("c:/ProgramData/chocolatey/bin") exec-path)))
+
+;; =============================================================================
+;; General configuration
+;; =============================================================================
+(setq-default tab-width 4)
+
+;; Zone out after 1 min when idle
+(setq dotspacemacs-zone-out-when-idle 60)
+
+;; See http://www.tutysara.net/posts/2017/03/24/spacemacs-ctrl-i-fix/
+(setq dotspacemacs-distinguish-gui-tab t)
+
+;; =============================================================================
+;; Layers specific configuration
+;; =============================================================================
 
 ;; dired configuration
 (with-eval-after-load 'dired
@@ -132,8 +146,6 @@
                (spacemacs/toggle-auto-fill-mode-on)
                (setq semantic-mode nil))))
 
-
-
 ;; hunspell configuration
 (with-eval-after-load "ispell"
   (add-to-list 'ispell-dictionary-alist
@@ -166,6 +178,10 @@
 ;; (ispell-hunspell-add-multi-dic "it_IT,en_GB")
 ;; (setq ispell-dictionary "it_IT,en_GB")
 
+;; =============================================================================
+;; org-mode and GTD configuration
+;; =============================================================================
+
 ;; org configuration for GTD
 (setq my/GTD-file-name "journal.org")
 
@@ -192,11 +208,9 @@
 (spacemacs/set-leader-keys "oj" 'my-open-GTD-file)
 (spacemacs/set-leader-keys "od" 'my-open-GTD-dir)
 
-
-;; Zone out after 1 min when idle
-(setq dotspacemacs-zone-out-when-idle 60)
-
-;;; Additional packages configuration
+;; =============================================================================
+;; Additional packages configuration
+;; =============================================================================
 
 ;; Atomic Chrome configuration
 (use-package atomic-chrome
@@ -219,6 +233,9 @@
 (eval-after-load 'flycheck
   (flycheck-popup-tip-mode))
 
+;; =============================================================================
+;; Final steps
+;; =============================================================================
 
 ;; Solve problem of server non starting on Windows
 (when (or (null (server-running-p))

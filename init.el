@@ -33,7 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   `(
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -76,15 +76,18 @@ This function should only modify configuration layer settings."
              colors-enable-nyan-cat-progress-bar t)
      gtags
      vimscript
-     semantic
      ;; private layers
      ;; my-cscope
      trac
      robotframework
-     ;; layers to install only if OS is Linux
-     ,(when (eq system-type 'gnu/linux)
-        'semantic)
      )
+
+   ;; Layers to add only if OS is Linux
+   dotspacemacs-configuration-layers
+   (if (eq system-type 'gnu/linux)
+       (append dotspacemacs-configuration-layers
+               '(semantic))
+       dotspacemacs-configuration-layers)
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

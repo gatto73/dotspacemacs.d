@@ -41,7 +41,6 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; better-defaults
      ;; git
-     ;; version-control
      syntax-checking
      org
      helm
@@ -52,6 +51,10 @@ This function should only modify configuration layer settings."
      html
      csv
      git
+     (version-control :variables
+                      version-control-diff-tool 'diff-hl
+                      version-congrol-diff-side 'right
+                      version-congrol-global-margin t)
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t

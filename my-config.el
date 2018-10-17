@@ -118,20 +118,6 @@
     (spacemacs/set-leader-keys-for-major-mode 'python-mode
       "i" 'sphinx-doc)))
 
-;; c++-mode configuration
-(with-eval-after-load 'cc-mode
-  (add-hook 'c++-mode-hook
-            '(lambda ()
-               (setq show-trailing-whitespace nil)
-               (setq tab-width 4))))
-
-;; c-mode configuration
-(with-eval-after-load 'cc-mode
-  (add-hook 'c-mode-hook
-            '(lambda ()
-               (setq show-trailing-whitespace nil)
-               (setq tab-width 4))))
-
 ;; cmake-mode configuration
 (with-eval-after-load 'cmake-mode
   (add-hook 'cmake-mode-hook
@@ -176,6 +162,37 @@
 ;; (ispell-set-spellchecker-params)
 ;; (ispell-hunspell-add-multi-dic "it_IT,en_GB")
 ;; (setq ispell-dictionary "it_IT,en_GB")
+
+
+;; =============================================================================
+;; c++-mode style configuration for Dinex project
+;; =============================================================================
+
+(defconst c++-dinex-style
+  '((c-basic-offset . 4)
+    (c-tab-always-indent . t)
+    (c-echo-syntactic-information-p . t))
+  "C++ style configuration for Dinex projects")
+
+(c-add-style "C++-Dinex" c++-dinex-style)
+
+;; c++-mode configuration
+(with-eval-after-load 'cc-mode
+  (add-hook 'c++-mode-hook
+            '(lambda ()
+               (setq show-trailing-whitespace nil)
+               (setq indent-tabs-mode t)
+               (setq tab-width 4)
+               (c-set-style "C++-Dinex"))))
+
+;; c-mode configuration
+(with-eval-after-load 'cc-mode
+  (add-hook 'c-mode-hook
+            '(lambda ()
+               (setq show-trailing-whitespace nil)
+               (setq indent-tabs-mode t)
+               (setq tab-width 4)
+               )))
 
 ;; =============================================================================
 ;; org-mode and GTD configuration

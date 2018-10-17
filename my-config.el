@@ -165,16 +165,16 @@
 
 
 ;; =============================================================================
-;; c++-mode style configuration for Dinex project
+;; c++-mode style configuration for D projects
 ;; =============================================================================
 
-(defconst c++-dinex-style
+(defconst c++-d-style
   '((c-basic-offset . 4)
     (c-tab-always-indent . t)
     (c-echo-syntactic-information-p . t))
   "C++ style configuration for Dinex projects")
 
-(c-add-style "C++-Dinex" c++-dinex-style)
+(c-add-style "C++-D" c++-d-style)
 
 ;; c++-mode configuration
 (with-eval-after-load 'cc-mode
@@ -183,7 +183,7 @@
                (setq show-trailing-whitespace nil)
                (setq indent-tabs-mode t)
                (setq tab-width 4)
-               (c-set-style "C++-Dinex"))))
+               (c-set-style "C++-D"))))
 
 ;; c-mode configuration
 (with-eval-after-load 'cc-mode

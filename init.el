@@ -57,7 +57,7 @@ This function should only modify configuration layer settings."
                       version-control-global-margin t)
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t
+            c-c++-enable-clang-support nil
             c-c++-enable-clang-format-on-save nil)
      cmake
      (spell-checking :variables

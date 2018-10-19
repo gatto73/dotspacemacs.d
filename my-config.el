@@ -240,7 +240,8 @@
     (setq atomic-chrome-buffer-open-style 'full)
     (setq atomic-chrome-default-major-mode 'text-mode)
     (setq atomic-chrome-url-major-mode-alist '(("notebook" . python-mode)
-                                               ("Trac" . tracwiki-mode)))))
+                                               ("Trac" . tracwiki-mode)
+                                               ("wiki" . tracwiki-mode)))))
 
 ;; flycheck-popup-tip configuration
 (require 'flycheck-popup-tip)

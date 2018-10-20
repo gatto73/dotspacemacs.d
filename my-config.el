@@ -171,7 +171,7 @@
 (defconst c++-d-style
   '((c-basic-offset . 4)
     (c-tab-always-indent . t)
-    (c-echo-syntactic-information-p . t))
+    (c-echo-syntactic-information-p . nil))
   "C++ style configuration for Dinex projects")
 
 (c-add-style "C++-D" c++-d-style)

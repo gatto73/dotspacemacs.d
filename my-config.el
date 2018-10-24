@@ -99,6 +99,8 @@
 (with-eval-after-load 'text-mode
   (add-hook 'text-mode-hook
             '(lambda ()
+               (spacemacs/toggle-fill-column-indicator-on)
+               (setq-default indent-tabs-mode t)
                (spacemacs/toggle-visual-line-navigation-on))))
 
 ;; python configuration

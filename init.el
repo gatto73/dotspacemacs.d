@@ -252,7 +252,7 @@ It should only modify the values of Spacemacs settings."
                                        ((string= "NB-ANDREOLETTI"
                                                  (system-name)) 22)
                                        ((string= "ZBook-andreoletti"
-                                                 (system-name)) 20)
+                                                 (system-name)) 22)
                                        (t 26))
                                :weight normal
                                :width normal)

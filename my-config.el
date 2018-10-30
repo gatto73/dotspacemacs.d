@@ -194,7 +194,7 @@
                (setq show-trailing-whitespace nil)
                (setq indent-tabs-mode t)
                (setq tab-width 4)
-               )))
+               (c-set-style "C++-D"))))
 
 ;; =============================================================================
 ;; org-mode and GTD configuration

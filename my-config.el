@@ -4,7 +4,7 @@
 
 (let (my-magit-repository-dir)
   (setq my-magit-repository-dir '(("~/workspace/" . 1)
-                                  ("~/Dinex/git-svn/" . 1)
+                                  ("~/Dinex/" . 2)
                                   ("~/.spacemacs.d/" . 0)
                                   ("~/.emacs.d/" . 0)))
   ;; Windows 10 on ThinkPad (home)

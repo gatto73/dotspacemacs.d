@@ -3,7 +3,8 @@
 ;; =============================================================================
 
 (let (my-magit-repository-dir)
-  (setq my-magit-repository-dir '(("~/workspace/SVN_git/" . 1)
+  (setq my-magit-repository-dir '(("~/workspace/" . 1)
+                                  ("~/Dinex/git-svn/" . 1)
                                   ("~/.spacemacs.d/" . 0)
                                   ("~/.emacs.d/" . 0)))
   ;; Windows 10 on ThinkPad (home)
@@ -171,31 +172,31 @@
 ;; c++-mode style configuration for D projects
 ;; =============================================================================
 
-(defconst c++-d-style
-  '((c-basic-offset . 4)
-    (c-tab-always-indent . t)
-    (c-echo-syntactic-information-p . nil))
-  "C++ style configuration for Dinex projects")
+;; (defconst c++-d-style
+;;   '((c-basic-offset . 4)
+;;     (c-tab-always-indent . t)
+;;     (c-echo-syntactic-information-p . nil))
+;;   "C++ style configuration for Dinex projects")
 
-(c-add-style "C++-D" c++-d-style)
+;; (c-add-style "C++-D" c++-d-style)
 
-;; c++-mode configuration
-(with-eval-after-load 'cc-mode
-  (add-hook 'c++-mode-hook
-            '(lambda ()
-               (setq show-trailing-whitespace nil)
-               (setq indent-tabs-mode t)
-               (setq tab-width 4)
-               (c-set-style "C++-D"))))
+;; ;; c++-mode configuration
+;; (with-eval-after-load 'cc-mode
+;;   (add-hook 'c++-mode-hook
+;;             '(lambda ()
+;;                (setq show-trailing-whitespace nil)
+;;                (setq indent-tabs-mode t)
+;;                (setq tab-width 4)
+;;                (c-set-style "C++-D"))))
 
-;; c-mode configuration
-(with-eval-after-load 'cc-mode
-  (add-hook 'c-mode-hook
-            '(lambda ()
-               (setq show-trailing-whitespace nil)
-               (setq indent-tabs-mode t)
-               (setq tab-width 4)
-               (c-set-style "C++-D"))))
+;; ;; c-mode configuration
+;; (with-eval-after-load 'cc-mode
+;;   (add-hook 'c-mode-hook
+;;             '(lambda ()
+;;                (setq show-trailing-whitespace nil)
+;;                (setq indent-tabs-mode t)
+;;                (setq tab-width 4)
+;;                (c-set-style "C++-D"))))
 
 ;; =============================================================================
 ;; org-mode and GTD configuration

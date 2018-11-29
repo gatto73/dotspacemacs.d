@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
              colors-enable-nyan-cat-progress-bar t)
      gtags
      vimscript
+     sql
      ;; private layers
      ;; my-cscope
      trac

@@ -111,6 +111,10 @@
                (spacemacs/toggle-fill-column-indicator-on)
                (spacemacs/toggle-auto-fill-mode-on))))
 
+;; git layer configuration
+(with-eval-after-load 'git-commit
+					  (global-git-commit-mode t))
+
 ;; configure sphinx-doc
 (use-package sphinx-doc
   :defer t
@@ -266,3 +270,6 @@
       (server-force-stop))
   (server-start)
   (message "traccia: Server not running, started from my-config.el"))
+
+;; Temp conf
+(ido-mode -1)

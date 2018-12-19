@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# key: branch
+# name: Branches
+# contributor: lorenzo
+# --
+${1:$$
+(yas-choose-value '("daTrunk_51131_DONNA_release"
+"daTrunk_57198_DOPPIO_release"
+"daTrunk_36325_GOAL_release_fotocamera"
+"daTrunk_57398_GOAL_release"
+"trunk"))} r${2:XXXXX}
+$0

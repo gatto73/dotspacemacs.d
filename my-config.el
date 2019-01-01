@@ -68,6 +68,11 @@
 ;; =============================================================================
 ;; General configuration
 ;; =============================================================================
+;; evil-escape configuration
+;; https://github.com/syl20bnr/evil-escape/blob/master/README.md
+(setq-default evil-escape-delay 0.3)
+
+;;
 (setq-default tab-width 4)
 
 ;; Zone out after 1 min when idle

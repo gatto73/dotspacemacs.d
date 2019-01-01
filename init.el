@@ -46,7 +46,16 @@ This function should only modify configuration layer settings."
      helm
      neotree
      emacs-lisp
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-idle-delay 0.2
+                      auto-completion-private-snippets-directory nil
+                      auto-completion-enable-snippets-in-popup nil
+                      auto-completion-enable-help-tooltip nil
+                      auto-completion-enable-sort-by-usage nil)
      markdown
      html
      csv
@@ -71,12 +80,13 @@ This function should only modify configuration layer settings."
      (python :variables
              python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
-     scheme
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
      gtags
      vimscript
      sql
+	 sphinx
+     restructuredtext 
      ;; private layers
      ;; my-cscope
      trac

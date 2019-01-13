@@ -44,7 +44,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      org
      helm
-     neotree
+     treemacs
      emacs-lisp
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete

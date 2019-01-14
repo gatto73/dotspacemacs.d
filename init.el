@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      (python :variables
              python-enable-yapf-format-on-save t
+			 python-sort-imports-on-save t
              python-test-runner 'pytest)
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)

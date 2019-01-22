@@ -89,7 +89,15 @@
 (with-eval-after-load 'dired
   (setq dired-dwim-target t))
 
-;; markdown configuration
+;; text-mode configuration
+(with-eval-after-load 'text-mode
+  (add-hook 'text-mode-hook
+            '(lambda ()
+               (spacemacs/toggle-fill-column-indicator-on)
+               (setq-default indent-tabs-mode t)
+               (spacemacs/toggle-visual-line-navigation-on))))
+
+;; markdown layer configuration
 (with-eval-after-load 'markdown-mode
   (add-hook 'markdown-mode-hook
             '(lambda ()
@@ -101,15 +109,11 @@
                             " --from=markdown --to=html --quiet"
                             " --standalone --mathjax --highlight-style=pygments"))))
 
-;; text-mode configuration
-(with-eval-after-load 'text-mode
-  (add-hook 'text-mode-hook
-            '(lambda ()
-               (spacemacs/toggle-fill-column-indicator-on)
-               (setq-default indent-tabs-mode t)
-               (spacemacs/toggle-visual-line-navigation-on))))
+;; treemacs layer configuration
+(with-eval-after-load 'treemacs
+  (setq treemacs-width 40))
 
-;; python configuration
+;; python layer configuration
 (with-eval-after-load 'python
   (add-hook 'python-mode-hook
             '(lambda ()
